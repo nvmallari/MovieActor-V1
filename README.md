@@ -21,7 +21,7 @@ Django: https://www.djangoproject.com
 # License
 MIT License
 
-Copyright (c) [2022] [Nicholas Mallari]
+Copyright (c) 2022 Nicholas Mallari
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
