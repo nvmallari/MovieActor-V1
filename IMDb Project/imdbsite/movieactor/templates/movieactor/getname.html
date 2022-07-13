@@ -1,0 +1,10 @@
+<h3>Type in two names:</h3>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
+
+<a href="/movieactor/">Go back</a>
+
+<! We should probably think about consolidating /movieactor/ and /movieactor/get-name/>

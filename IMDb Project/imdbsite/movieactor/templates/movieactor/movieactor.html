@@ -1,0 +1,43 @@
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'movieactor/style.css' %}">
+</head>
+<body>
+<h1>MovieActorV1 Application</h1>
+<br>
+<br>
+<p>This application will help you find that one actor you're thinking of, but their name is on the tip of your tongue.</p>
+<br>
+<p>Just enter in two movies he/she/they are in and we'll figure it out for you!</p>
+<br>
+<br>
+<h3>Type in two movies:</h3>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" autocapitalize="words" value="Submit">
+</form>
+
+<a href="/home/">Go back to home page</a>
+<br>
+<br>
+<b>Movie 1:</b>
+{{ name1 }}
+<br>
+<br>
+<b>Movie 2:</b>
+{{ name2 }}
+<br>
+<br>
+<b>The actor you're looking for is:</b>
+{{ matchingActor }}
+<br>
+<br>
+<b>Filmography:</b>
+{% for role in getactorview %}
+{% for job in role %}
+<p>{{job}}</p>
+{% endfor %}
+{% endfor %}
+</body>
